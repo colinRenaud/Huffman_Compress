@@ -1,0 +1,49 @@
+\hypertarget{Uncompress_8h}{}\section{Uncompress.\+h File Reference}
+\label{Uncompress_8h}\index{Uncompress.\+h@{Uncompress.\+h}}
+{\ttfamily \#include \char`\"{}huffman.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$fcntl.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{Uncompress_8h_a96fa054eae058b65d12d9a2ffc41611c}{write\+Uncompress\+Code} (\hyperlink{structNode}{Node} $\ast$tree, unsigned short int tree\+Size, size\+\_\+t text\+Length, F\+I\+LE $\ast$f\+Src)
+\item 
+void \hyperlink{Uncompress_8h_a3dfd471c665455ec7c85f5c29a99ba43}{uncompress} (char $\ast$src)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Uncompress.\+h@{Uncompress.\+h}!uncompress@{uncompress}}
+\index{uncompress@{uncompress}!Uncompress.\+h@{Uncompress.\+h}}
+\subsubsection[{\texorpdfstring{uncompress(char $\ast$src)}{uncompress(char *src)}}]{\setlength{\rightskip}{0pt plus 5cm}void uncompress (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{src}
+\end{DoxyParamCaption}
+)}\hypertarget{Uncompress_8h_a3dfd471c665455ec7c85f5c29a99ba43}{}\label{Uncompress_8h_a3dfd471c665455ec7c85f5c29a99ba43}
+Decompress a file 
+\begin{DoxyParams}{Parameters}
+{\em src} & \+: path to the compressed file \\
+\hline
+\end{DoxyParams}
+\index{Uncompress.\+h@{Uncompress.\+h}!write\+Uncompress\+Code@{write\+Uncompress\+Code}}
+\index{write\+Uncompress\+Code@{write\+Uncompress\+Code}!Uncompress.\+h@{Uncompress.\+h}}
+\subsubsection[{\texorpdfstring{write\+Uncompress\+Code(\+Node $\ast$tree, unsigned short int tree\+Size, size\+\_\+t text\+Length, F\+I\+L\+E $\ast$f\+Src)}{writeUncompressCode(Node *tree, unsigned short int treeSize, size_t textLength, FILE *fSrc)}}]{\setlength{\rightskip}{0pt plus 5cm}void write\+Uncompress\+Code (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{tree, }
+\item[{unsigned short int}]{tree\+Size, }
+\item[{size\+\_\+t}]{text\+Length, }
+\item[{F\+I\+LE $\ast$}]{f\+Src}
+\end{DoxyParamCaption}
+)}\hypertarget{Uncompress_8h_a96fa054eae058b65d12d9a2ffc41611c}{}\label{Uncompress_8h_a96fa054eae058b65d12d9a2ffc41611c}
+Write the uncompress code to std out 
+\begin{DoxyParams}{Parameters}
+{\em tree} & \+: array of node \\
+\hline
+{\em tree\+Size} & \+: size of tree \\
+\hline
+{\em text\+Length} & \+: original size of the compressed text \\
+\hline
+{\em f\+Src} & \+: compresses file \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,98 @@
+\hypertarget{Compress_8h}{}\section{Compress.\+h File Reference}
+\label{Compress_8h}\index{Compress.\+h@{Compress.\+h}}
+{\ttfamily \#include \char`\"{}huffman.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{Compress_8h_a9c61e06aeed6a39ba46d58a3043eae87}{to\+Bin\+Code} (char $\ast$code, unsigned char $\ast$c, unsigned short str\+Index, unsigned short index, unsigned short length)
+\item 
+size\+\_\+t \hyperlink{Compress_8h_aeadad3b886cac60461dea01ff5fd7b19}{write\+Header} (\hyperlink{structNode}{Node} $\ast$tree, unsigned short int tree\+Size, F\+I\+LE $\ast$f\+Dest)
+\item 
+size\+\_\+t \hyperlink{Compress_8h_aa392cdbb6f5b318faaa47fa6c7efd0da}{write\+Code} (\hyperlink{structNode}{Node} $\ast$tree, short int $\ast$index\+In\+Tree, F\+I\+LE $\ast$f\+Src, F\+I\+LE $\ast$f\+Dest)
+\item 
+void \hyperlink{Compress_8h_a7069f3b5ad9832262530cbef4d360bed}{compress} (char $\ast$src, char $\ast$dest)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Compress.\+h@{Compress.\+h}!compress@{compress}}
+\index{compress@{compress}!Compress.\+h@{Compress.\+h}}
+\subsubsection[{\texorpdfstring{compress(char $\ast$src, char $\ast$dest)}{compress(char *src, char *dest)}}]{\setlength{\rightskip}{0pt plus 5cm}void compress (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{src, }
+\item[{char $\ast$}]{dest}
+\end{DoxyParamCaption}
+)}\hypertarget{Compress_8h_a7069f3b5ad9832262530cbef4d360bed}{}\label{Compress_8h_a7069f3b5ad9832262530cbef4d360bed}
+Compress a file 
+\begin{DoxyParams}{Parameters}
+{\em src} & \+: path of the file to compress \\
+\hline
+{\em dest} & \+: path of the compress file \\
+\hline
+\end{DoxyParams}
+\index{Compress.\+h@{Compress.\+h}!to\+Bin\+Code@{to\+Bin\+Code}}
+\index{to\+Bin\+Code@{to\+Bin\+Code}!Compress.\+h@{Compress.\+h}}
+\subsubsection[{\texorpdfstring{to\+Bin\+Code(char $\ast$code, unsigned char $\ast$c, unsigned short str\+Index, unsigned short index, unsigned short length)}{toBinCode(char *code, unsigned char *c, unsigned short strIndex, unsigned short index, unsigned short length)}}]{\setlength{\rightskip}{0pt plus 5cm}void to\+Bin\+Code (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{code, }
+\item[{unsigned char $\ast$}]{c, }
+\item[{unsigned short}]{str\+Index, }
+\item[{unsigned short}]{index, }
+\item[{unsigned short}]{length}
+\end{DoxyParamCaption}
+)}\hypertarget{Compress_8h_a9c61e06aeed6a39ba46d58a3043eae87}{}\label{Compress_8h_a9c61e06aeed6a39ba46d58a3043eae87}
+Convert a char $\ast$ to binary code into c 
+\begin{DoxyParams}{Parameters}
+{\em code} & \+: huffman code of a character \\
+\hline
+{\em c} & \+: character which will store bit by bit the huffman code \\
+\hline
+{\em str\+Index} & \+: begin index of code \\
+\hline
+{\em index} & \+: index th bit of c to write \\
+\hline
+{\em length} & \+: number of huffman character to write into c ex \+: code = \char`\"{}101011\char`\"{}(10) code =\char`\"{}00000000\char`\"{}(2) str\+Index = 2 , length = 3 , index = 3 code\mbox{[}2;2+length\mbox{]} = \char`\"{}101\char`\"{}(10) write 001(2) to code from index c\mbox{[}3;3+length\mbox{]} = \char`\"{}000\char`\"{}(2) -\/$>$ \char`\"{}101\char`\"{} So now c = \char`\"{}00010100\char`\"{}(2) \\
+\hline
+\end{DoxyParams}
+\index{Compress.\+h@{Compress.\+h}!write\+Code@{write\+Code}}
+\index{write\+Code@{write\+Code}!Compress.\+h@{Compress.\+h}}
+\subsubsection[{\texorpdfstring{write\+Code(\+Node $\ast$tree, short int $\ast$index\+In\+Tree, F\+I\+L\+E $\ast$f\+Src, F\+I\+L\+E $\ast$f\+Dest)}{writeCode(Node *tree, short int *indexInTree, FILE *fSrc, FILE *fDest)}}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t write\+Code (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{tree, }
+\item[{short int $\ast$}]{index\+In\+Tree, }
+\item[{F\+I\+LE $\ast$}]{f\+Src, }
+\item[{F\+I\+LE $\ast$}]{f\+Dest}
+\end{DoxyParamCaption}
+)}\hypertarget{Compress_8h_aa392cdbb6f5b318faaa47fa6c7efd0da}{}\label{Compress_8h_aa392cdbb6f5b318faaa47fa6c7efd0da}
+write the compressed code body to the file f\+Dest 
+\begin{DoxyParams}{Parameters}
+{\em tree} & \+: array of node \\
+\hline
+{\em tree\+Size} & \+: size of tree \\
+\hline
+{\em src} & \+: path to the source file to read \\
+\hline
+{\em dest} & \+: path to the destination file to write \\
+\hline
+\end{DoxyParams}
+\index{Compress.\+h@{Compress.\+h}!write\+Header@{write\+Header}}
+\index{write\+Header@{write\+Header}!Compress.\+h@{Compress.\+h}}
+\subsubsection[{\texorpdfstring{write\+Header(\+Node $\ast$tree, unsigned short int tree\+Size, F\+I\+L\+E $\ast$f\+Dest)}{writeHeader(Node *tree, unsigned short int treeSize, FILE *fDest)}}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t write\+Header (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{tree, }
+\item[{unsigned short int}]{tree\+Size, }
+\item[{F\+I\+LE $\ast$}]{f\+Dest}
+\end{DoxyParamCaption}
+)}\hypertarget{Compress_8h_aeadad3b886cac60461dea01ff5fd7b19}{}\label{Compress_8h_aeadad3b886cac60461dea01ff5fd7b19}
+write the huffman header to the file f\+Dest 
+\begin{DoxyParams}{Parameters}
+{\em tree} & \+: array of node \\
+\hline
+{\em tree\+Size} & \+: size of tree \\
+\hline
+{\em f\+Src} & \+: File where to write the header \\
+\hline
+\end{DoxyParams}

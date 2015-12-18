@@ -1,0 +1,112 @@
+\hypertarget{huffman_8c}{}\section{huffman.\+c File Reference}
+\label{huffman_8c}\index{huffman.\+c@{huffman.\+c}}
+{\ttfamily \#include \char`\"{}huffman.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{huffman_8c_a6b20d41d6252e9871430c242cb1a56e7}{B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}~2048
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned short int \hyperlink{huffman_8c_a4d1ec454a6ba22cd77ddfb670a3897b5}{build\+Distribution} (F\+I\+LE $\ast$f\+Src, unsigned int $\ast$nb\+Occurrence, size\+\_\+t $\ast$text\+Length)
+\item 
+\hyperlink{structNode}{Node} $\ast$ \hyperlink{huffman_8c_a0cd28b7ddecab1347466cce31d6fb378}{init\+Array} (unsigned int $\ast$nb\+Occurrence, unsigned short int tree\+Size)
+\item 
+void \hyperlink{huffman_8c_ac02cece56310d0b7148239d329e1cda8}{fill\+Array} (\hyperlink{structNode}{Node} $\ast$tree, unsigned short int tree\+Size)
+\item 
+void \hyperlink{huffman_8c_a2f96ec0c953a6e206faf3073d495a5a6}{calculate\+Code} (\hyperlink{structNode}{Node} $\ast$tree, unsigned short int root, char $\ast$code)
+\item 
+void \hyperlink{huffman_8c_a42e1714b3e1f6b292e7f08ec2d4d078f}{display\+Tree} (\hyperlink{structNode}{Node} $\ast$tree, unsigned short int tree\+Size)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{huffman.\+c@{huffman.\+c}!B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE@{B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}}
+\index{B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE@{B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}!huffman.\+c@{huffman.\+c}}
+\subsubsection[{\texorpdfstring{B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}{BUFFER_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE~2048}\hypertarget{huffman_8c_a6b20d41d6252e9871430c242cb1a56e7}{}\label{huffman_8c_a6b20d41d6252e9871430c242cb1a56e7}
+
+
+\subsection{Function Documentation}
+\index{huffman.\+c@{huffman.\+c}!build\+Distribution@{build\+Distribution}}
+\index{build\+Distribution@{build\+Distribution}!huffman.\+c@{huffman.\+c}}
+\subsubsection[{\texorpdfstring{build\+Distribution(\+F\+I\+L\+E $\ast$f\+Src, unsigned int $\ast$nb\+Occurrence, size\+\_\+t $\ast$text\+Length)}{buildDistribution(FILE *fSrc, unsigned int *nbOccurrence, size_t *textLength)}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short int build\+Distribution (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{f\+Src, }
+\item[{unsigned int $\ast$}]{nb\+Occurrence, }
+\item[{size\+\_\+t $\ast$}]{text\+Length}
+\end{DoxyParamCaption}
+)}\hypertarget{huffman_8c_a4d1ec454a6ba22cd77ddfb670a3897b5}{}\label{huffman_8c_a4d1ec454a6ba22cd77ddfb670a3897b5}
+Read a file and store into an array the occurrence of each character O(n) n \+: size of the file \begin{DoxyReturn}{Returns}
+the number of different character 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \+: path of the file to read \\
+\hline
+{\em nb\+Occurrence} & store the occurrence of each character \\
+\hline
+\end{DoxyParams}
+\index{huffman.\+c@{huffman.\+c}!calculate\+Code@{calculate\+Code}}
+\index{calculate\+Code@{calculate\+Code}!huffman.\+c@{huffman.\+c}}
+\subsubsection[{\texorpdfstring{calculate\+Code(\+Node $\ast$tree, unsigned short int root, char $\ast$code)}{calculateCode(Node *tree, unsigned short int root, char *code)}}]{\setlength{\rightskip}{0pt plus 5cm}void calculate\+Code (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{tree, }
+\item[{unsigned short int}]{root, }
+\item[{char $\ast$}]{code}
+\end{DoxyParamCaption}
+)}\hypertarget{huffman_8c_a2f96ec0c953a6e206faf3073d495a5a6}{}\label{huffman_8c_a2f96ec0c953a6e206faf3073d495a5a6}
+write the huffman code of each tree node O(n) complexity \+: n \+: root index 
+\begin{DoxyParams}{Parameters}
+{\em tree} & \+: array of node \\
+\hline
+{\em root} & \+: root index of the tree from where to start \\
+\hline
+{\em code} & \+: code which store the huffman codes \\
+\hline
+\end{DoxyParams}
+\index{huffman.\+c@{huffman.\+c}!display\+Tree@{display\+Tree}}
+\index{display\+Tree@{display\+Tree}!huffman.\+c@{huffman.\+c}}
+\subsubsection[{\texorpdfstring{display\+Tree(\+Node $\ast$tree, unsigned short int tree\+Size)}{displayTree(Node *tree, unsigned short int treeSize)}}]{\setlength{\rightskip}{0pt plus 5cm}void display\+Tree (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{tree, }
+\item[{unsigned short int}]{tree\+Size}
+\end{DoxyParamCaption}
+)}\hypertarget{huffman_8c_a42e1714b3e1f6b292e7f08ec2d4d078f}{}\label{huffman_8c_a42e1714b3e1f6b292e7f08ec2d4d078f}
+display the tree on the std out O(n) complexity n = tree\+Size 
+\begin{DoxyParams}{Parameters}
+{\em Tree} & \+: array of node to print \\
+\hline
+{\em tree\+Size} & \+: number of element of tree to print \\
+\hline
+\end{DoxyParams}
+\index{huffman.\+c@{huffman.\+c}!fill\+Array@{fill\+Array}}
+\index{fill\+Array@{fill\+Array}!huffman.\+c@{huffman.\+c}}
+\subsubsection[{\texorpdfstring{fill\+Array(\+Node $\ast$tree, unsigned short int tree\+Size)}{fillArray(Node *tree, unsigned short int treeSize)}}]{\setlength{\rightskip}{0pt plus 5cm}void fill\+Array (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{tree, }
+\item[{unsigned short int}]{tree\+Size}
+\end{DoxyParamCaption}
+)}\hypertarget{huffman_8c_ac02cece56310d0b7148239d329e1cda8}{}\label{huffman_8c_ac02cece56310d0b7148239d329e1cda8}
+fill the array by building the huffman tree O(n²) complexity \+: n\+: tree\+Size 
+\begin{DoxyParams}{Parameters}
+{\em tree} & \+: array of node to fill \\
+\hline
+{\em tree\+Size} & \+: size of the tree \\
+\hline
+\end{DoxyParams}
+\index{huffman.\+c@{huffman.\+c}!init\+Array@{init\+Array}}
+\index{init\+Array@{init\+Array}!huffman.\+c@{huffman.\+c}}
+\subsubsection[{\texorpdfstring{init\+Array(unsigned int $\ast$nb\+Occurrence, unsigned short int tree\+Size)}{initArray(unsigned int *nbOccurrence, unsigned short int treeSize)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node}$\ast$ init\+Array (
+\begin{DoxyParamCaption}
+\item[{unsigned int $\ast$}]{nb\+Occurrence, }
+\item[{unsigned short int}]{tree\+Size}
+\end{DoxyParamCaption}
+)}\hypertarget{huffman_8c_a0cd28b7ddecab1347466cce31d6fb378}{}\label{huffman_8c_a0cd28b7ddecab1347466cce31d6fb378}
+create at array of node,initialize it and return it O(n) complexity \+: n \+: number of ascii characters 
+\begin{DoxyParams}{Parameters}
+{\em nb\+Occurrence} & \+: array which store the number of currency of each character \\
+\hline
+{\em tree\+Size} & \+: number of \hyperlink{structNode}{Node} \\
+\hline
+\end{DoxyParams}

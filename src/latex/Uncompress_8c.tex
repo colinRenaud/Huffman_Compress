@@ -1,0 +1,67 @@
+\hypertarget{Uncompress_8c}{}\section{Uncompress.\+c File Reference}
+\label{Uncompress_8c}\index{Uncompress.\+c@{Uncompress.\+c}}
+{\ttfamily \#include \char`\"{}Uncompress.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{Uncompress_8c_a6b20d41d6252e9871430c242cb1a56e7}{B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}~2048
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{Uncompress_8c_a96fa054eae058b65d12d9a2ffc41611c}{write\+Uncompress\+Code} (\hyperlink{structNode}{Node} $\ast$tree, unsigned short int tree\+Size, size\+\_\+t text\+Length, F\+I\+LE $\ast$f\+Src)
+\item 
+void \hyperlink{Uncompress_8c_a3dfd471c665455ec7c85f5c29a99ba43}{uncompress} (char $\ast$src)
+\item 
+int \hyperlink{Uncompress_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{Uncompress.\+c@{Uncompress.\+c}!B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE@{B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}}
+\index{B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE@{B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}!Uncompress.\+c@{Uncompress.\+c}}
+\subsubsection[{\texorpdfstring{B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}{BUFFER_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE~2048}\hypertarget{Uncompress_8c_a6b20d41d6252e9871430c242cb1a56e7}{}\label{Uncompress_8c_a6b20d41d6252e9871430c242cb1a56e7}
+
+
+\subsection{Function Documentation}
+\index{Uncompress.\+c@{Uncompress.\+c}!main@{main}}
+\index{main@{main}!Uncompress.\+c@{Uncompress.\+c}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{Uncompress_8c_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{Uncompress_8c_a3c04138a5bfe5d72780bb7e82a18e627}
+\index{Uncompress.\+c@{Uncompress.\+c}!uncompress@{uncompress}}
+\index{uncompress@{uncompress}!Uncompress.\+c@{Uncompress.\+c}}
+\subsubsection[{\texorpdfstring{uncompress(char $\ast$src)}{uncompress(char *src)}}]{\setlength{\rightskip}{0pt plus 5cm}void uncompress (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{src}
+\end{DoxyParamCaption}
+)}\hypertarget{Uncompress_8c_a3dfd471c665455ec7c85f5c29a99ba43}{}\label{Uncompress_8c_a3dfd471c665455ec7c85f5c29a99ba43}
+Decompress a file 
+\begin{DoxyParams}{Parameters}
+{\em src} & \+: path to the compressed file \\
+\hline
+\end{DoxyParams}
+\index{Uncompress.\+c@{Uncompress.\+c}!write\+Uncompress\+Code@{write\+Uncompress\+Code}}
+\index{write\+Uncompress\+Code@{write\+Uncompress\+Code}!Uncompress.\+c@{Uncompress.\+c}}
+\subsubsection[{\texorpdfstring{write\+Uncompress\+Code(\+Node $\ast$tree, unsigned short int tree\+Size, size\+\_\+t text\+Length, F\+I\+L\+E $\ast$f\+Src)}{writeUncompressCode(Node *tree, unsigned short int treeSize, size_t textLength, FILE *fSrc)}}]{\setlength{\rightskip}{0pt plus 5cm}void write\+Uncompress\+Code (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{tree, }
+\item[{unsigned short int}]{tree\+Size, }
+\item[{size\+\_\+t}]{text\+Length, }
+\item[{F\+I\+LE $\ast$}]{f\+Src}
+\end{DoxyParamCaption}
+)}\hypertarget{Uncompress_8c_a96fa054eae058b65d12d9a2ffc41611c}{}\label{Uncompress_8c_a96fa054eae058b65d12d9a2ffc41611c}
+Write the uncompress code to std out 
+\begin{DoxyParams}{Parameters}
+{\em tree} & \+: array of node \\
+\hline
+{\em tree\+Size} & \+: size of tree \\
+\hline
+{\em text\+Length} & \+: original size of the compressed text \\
+\hline
+{\em f\+Src} & \+: compresses file \\
+\hline
+\end{DoxyParams}
