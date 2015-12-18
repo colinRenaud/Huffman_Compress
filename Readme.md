@@ -3,8 +3,6 @@ Programme de compression de Huffman d'un fichier
 
 Auteurs :
 COLIN Renaud
-PASCUAL Florian
-
 
 Pour compiler :
 1) Avec make
@@ -32,9 +30,6 @@ Pour lancer le programme :
  - Décompresser : Dehuf fichier_compresse
 
 Etat d'avancement
-
-L'occurence d'un charactere est codé par un short int ce qui pose problème pour de trés gros fichiers
-Problème pour gérer les caractères spéciaux ASCII à partir du code 128 et ce malgré un codage en unsigned char
 
 -> Compression fonctionelle
 -> Décompression fonctionelle
